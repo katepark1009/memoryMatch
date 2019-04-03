@@ -7,35 +7,33 @@
     <title>Memory matching game</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="jquery.vide.min.js"></script>
-    <link
+    <linkf
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style2.css" />
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
     <script src="main.js"></script>
   </head>
   <body>
     <!-- <body data-vide-bg="videos/particles2"> -->
-    <div class="row header">
-       
-           <div class='logocontainer col-sm-2 col-lg-1'>
+    <!--header start-->
+    <div class="row header">     
+           <div class='logocontainer col-sm-1 col-lg-1'>
                <img class="logo"></img>
            </div>
-           <div class="title col-sm-8 col-lg-9">
-               <p>Memory Matching Game</p>
+           <div class="title col-sm-12 col-lg-11">
+              <p>Memory Matching Game</p>
            </div>
-           <div class="link col-sm-2 col-lg-2">
-           <a href="#">link</a>
-           </div>
+              <a href="#">link</a>
     </div>
-
-    <div class="row gamerow">
+    <!--header ends, game row starts-->
+    <div class='row'>
         <div class="gamestats">
-            <h2>STATS</h2>
+            <h5>STATS</h5>
             <div class="games-played">
                 <label class="label">Games Played</label>
                 <div class="value"></div>
@@ -50,286 +48,121 @@
             </div>
             <button class="reset">Reset</button>
         </div>
-        <!--stat ends-->
-        <!-- <div class="container col-sm-9 col-lg-9">
+    <!--game stat ends-->
+        <!--garfield <div class="container col-sm-9 col-lg-9">
           <div class="row">
           <div class="gifcontainer col-2 col-lg-2">
              <img class='gif' src="images/garfieldresize.gif"></>
          </div>     -->
-          <div class="game-areacontainer">
-          <div class="game-area row ">
+    <!--game area starts-->     
+        <div class="game-area">
                 <!-- <div class='manual'>
                      <p>manual</p>
                 </div>
                  -->
-            <div class="cardset col-md-offset-5">
-                <div class="row ">
-                <div class="cardcontainer">
+            <div class="cardset">
+              <div class ='cardsAreaBackground'>
+                <div class="row row1">
+                    <div class="cardcontainer">
                   <div class="card">
                      <div class="front">
-                         <div class="image">
-    
-                         </div>
+                         <img class="frontimage" src="images/blackpink22.png"></img>
                      </div>
                      <div class="back">
-                         <div class="image">
-    
-                         </div>
+                        <div class="backimage 1"></div>
                      </div>
                   </div>
-                </div>  
-                <div class="cardcontainer">
+                    </div>  
+                    <div class="cardcontainer">
                   <div class="card">
                      <div class="front">
-                         <div class="image">
-    
-                         </div>
+                        <img class="frontimage" src="images/akmu2.png"></img>
                      </div>
                      <div class="back">
-                         <div class="image">
-    
-                         </div>
+                         <div class="backimage 2"></div>
                      </div>
                   </div>
+                    </div>  
+                    <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                        <img class="frontimage" src="images/blackpink22.png"></img>
+                     </div>
+                     <div class="back">
+                         <div class="backimage 1"></div>
+                     </div>
+                  </div>
+                    </div>  
+                    <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                        <img class="frontimage" src="images/akmu2.png"></img>
+                     </div>
+                     <div class="back">
+                         <div class="backimage 2"></div>
+                     </div>
+                  </div>
+                    </div>  
+                    <!-- <div class="cardcontainer">
+                        <div class="card">
+                           <div class="front">
+                               <div class="frontimage"></div>
+                           </div>
+                           <div class="back">
+                               <div class="backimage"></div>
+                           </div>
+                        </div>
+                          </div>  
+                     <div class="cardcontainer">
+                        <div class="card">
+                           <div class="front">
+                               <div class="frontimage"></div>
+                           </div>
+                           <div class="back">
+                               <div class="backimage"></div>
+                           </div>
+                       </div>
+                    </div>         -->
+                    <!-- <div class="cardcontainer">
+                  
+                  
+                  
+                      <div class="card">
+                     <div class="front">
+                         <div class="frontimage"></div>
+                     </div>
+                     <div class="back">
+                         <div class="backimage"></div>
+                     </div>
+                  </div>
+                    </div>  
+                    <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="frontimage"></div>
+                     </div>
+                     <div class="back">
+                         <div class="backimage"></div>
+                     </div>
+                  </div>
+                    </div>  
+                    <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="frontimage"></div>
+                     </div>
+                     <div class="back">
+                         <div class="backimage"></div>
+                     </div>
+                  </div>
+                    </div>   -->
                 </div>
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>  
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div> 
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div> 
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row ">
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div> 
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>     
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>
-    
-                
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>  
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>  
-              </div>
-              <div class="row ">
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div> 
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div> 
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div> 
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>     
-                <div class="cardcontainer">
-                  <div class="card">
-                     <div class="front">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                     <div class="back">
-                         <div class="image">
-    
-                         </div>
-                     </div>
-                  </div>
-                </div>  
-              </div> 
-            </div>
-          </div>
-        </div>
-          </div>
-        </div>
-        
-      </div>
+              </div>  
+            </div>        
+
+
+    <!--game area ends-->    
+    </div>
       <!--video-->
       <!-- <div class="videocontainer">
           <video controls>

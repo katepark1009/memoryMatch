@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat|Permanent+Marker|Righteous|Ubuntu');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Permanent Marker', cursive; */
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.header {
+  background-color: lightblue; 
+  height: 15vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.title {
+  position: absolute;
+  margin: auto;
+  top: 15%;
+  left: 30%;
+  font-family: 'Permanent Marker', cursive;
+}
+p {
+  font-size: 1.7rem;
+}
+.logocontainer {
+  position: absolute;
+  background-image: url("images/backimg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.5;
+  height: 15vh;
+  width: 18%;
+}
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #487bef;
+}
+a {
+  position: absolute;
+  top: 80%;
+  left: 88%;
+}
+.gamestats {
+  position: relative;
+  width:19%;
+  height:100%;
+  float: left;
+  background-color: aquamarine;
+  text-align: center;
+  padding-top: 3%; /*위쪽 여백 조정 */
+  font-size: 1em;
+  font-family: 'Righteous', cursive
+}
+.reset {
+  all: unset;
+  border-radius: 25px;
+  padding: 4%;
+  background-color:#3c6382;
+  font-family: 'Righteous', cursive;
+  color: rgb(255, 255, 255);
+  box-shadow: 2px 3px 3px #041310;
+  margin-bottom: 10%;
+}
+.row1 {
+  position: relative;
+  margin: 0% 0% 0% 2%;
+  padding-top: 3%; /*카드들 윗 공간*/
+  width: 100%;
+  height: 85vh;
+}
+.game-area {
+  background-color:rgb(218, 190, 179); 
+  width: 100%;
+  min-height: 90vh;
+}
+.cardset {
+  margin: 0% 20% 2% 20%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color:lightgrey; 
+} 
+.cardcontainer {
+  margin-top: 2px;
+  display: inline-block;
+  background-color: black;
+  height: 20vh;
+  width: 11vw;
+  margin-left: 2px;
+  justify-content: center;
+  align-content: center;
+}
+.card {
+  margin:auto;
+  top: 5%;
+  height: 90%;
+  width: 80%;
+  background-color: orange;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  /* float: left; */
+}
+.front {
+  position: absolute;
+  margin:auto;
+  top: 5%;
+  height: 90%;
+  width: 90%;
+  /* background-color: pink; */
+  justify-content: center;
+  align-content: center;
+  /* background-image: url("images/blackpink22.png"); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.back {
+  position: relative;
+  z-index: 1000;
+  margin:auto;
+  top: 5%;
+  height: 90%;
+  width: 90%;
+  background-color: pink;
+  justify-content: center;
+  align-content: center;
+  background-image: url("images/logo1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.frontimage {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  z-index: 100;
+}
+img{
+  width: 110%;
+  height: 100%;
+  margin:auto;
+  position: absolute;
+}
