@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Memory matching game</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="jquery.vide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- <body data-vide-bg="videos/particles2"> -->
+    <div class="row header">
+       
+           <div class='logocontainer col-sm-2 col-lg-1'>
+               <img class="logo"></img>
+           </div>
+           <div class="title col-sm-8 col-lg-9">
+               <p>Memory Matching Game</p>
+           </div>
+           <div class="link col-sm-2 col-lg-2">
+           <a href="#">link</a>
+           </div>
+    </div>
+
+    <div class="row gamerow">
+        <div class="gamestats">
+            <h2>STATS</h2>
+            <div class="games-played">
+                <label class="label">Games Played</label>
+                <div class="value"></div>
+            </div>
+            <div class="attempts">
+                <label class="label">attempts</label>
+                <div class="value"></div>
+            </div>
+            <div class="accuracy">
+                <label class="label">Accuracy</label>
+                <div class="value"></div>
+            </div>
+            <button class="reset">Reset</button>
+        </div>
+        <!--stat ends-->
+        <!-- <div class="container col-sm-9 col-lg-9">
+          <div class="row">
+          <div class="gifcontainer col-2 col-lg-2">
+             <img class='gif' src="images/garfieldresize.gif"></>
+         </div>     -->
+          <div class="game-areacontainer">
+          <div class="game-area row ">
+                <!-- <div class='manual'>
+                     <p>manual</p>
+                </div>
+                 -->
+            <div class="cardset col-md-offset-5">
+                <div class="row ">
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>  
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>  
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div> 
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div> 
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div> 
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>     
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>
+    
+                
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>  
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>  
+              </div>
+              <div class="row ">
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div> 
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div> 
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div> 
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>     
+                <div class="cardcontainer">
+                  <div class="card">
+                     <div class="front">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                     <div class="back">
+                         <div class="image">
+    
+                         </div>
+                     </div>
+                  </div>
+                </div>  
+              </div> 
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+        
+      </div>
+      <!--video-->
+      <!-- <div class="videocontainer">
+          <video controls>
+            <source src="videos/stream.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div> -->
+        <!--after video-->
+      
+  </body>
+</html>
