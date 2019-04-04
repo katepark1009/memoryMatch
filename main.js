@@ -93,6 +93,8 @@ function card_clicked(){
             matches++;
             attempts++;
             $(this).hide();
+            first_card.parent().css({"background-color":"#a29bfe"})
+            second_card.parent().css({"background-color":"#a29bfe"})
             first_card_clicked = null;
             second_card_clicked = null;
             if (match_counter === total_possible_matches) {
