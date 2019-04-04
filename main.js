@@ -2,6 +2,10 @@ $(document).ready(initializeApp);
 
 function initializeApp(){
     $('.card').on('click','.back',card_clicked);
+    var row1 = $('.row1');
+    row1.append('<div class="cardcontainer">');
+    $('<div class="cardcontainer">').append('<div class="card"></div>');
+    $('<div class="card"><div>').append('<div class="front"></div>, <div class="back"></div>')
 
 }
 
@@ -15,6 +19,12 @@ var frontimages = [
     "images/akmu2.png",
     "images/blackpink22.png"
 ]
+var matches = 0;
+var attempts = 0;
+var accuracy = 0;
+var game_played = 0;
+
+
 
 function card_clicked(){
     if(first_card_clicked === null){
@@ -33,16 +43,15 @@ function card_clicked(){
             first_card_clicked = null;
             second_card_clicked = null;
             if (match_counter === total_possible_matches) {
-                alert("Won!");
+                console.log("matched!")
             }
         } else {
             $(this).hide();
             setTimeout(function(){
-                $(this).hide();
                 setTimeout(function(){
                     first_card.show();
                     second_card.show();
-                },500);
+                },1000);
             },1000);
             first_card_clicked = null;
             second_card_clicked = null;
@@ -52,3 +61,23 @@ function card_clicked(){
 }
 
 
+function display_stats () {
+    $('.games-played .value').text(games_played);
+    $('.attempts .value').text(attempts);
+    accuracy + "&percnt;";
+    $('.accuracy .value').text(accuracy);
+}
+
+
+function reset_stats () {
+    accuracy = 0;
+    matches = 0;
+    display_stats();
+}
+
+$('.gamestats').on('click', '.reset', function(){
+    games_played++;
+    reset_stats();
+    display_stats();
+    $('.back').remove();
+});
