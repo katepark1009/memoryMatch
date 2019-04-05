@@ -1,6 +1,7 @@
 $(document).ready(initializeApp);
 
 function initializeApp(){
+    $('.modal').hide();
     makeCard();
     display_stats();
     $('.card').on('click','.back',card_clicked);
@@ -40,14 +41,28 @@ var frontimages = [
     "images/exo2 (2).png"
 ]
 
-
+var gifs = [
+    "images/iugif1.gif",
+    "images/blackpinkgif2.gif",
+    "images/exogif2.gif",
+    "images/btsgif.gif",
+    "images/twicegif.gif",
+    "images/mamamoogif.gif",
+    "images/redvelvetgif.gif",
+    "images/snsdgif.gif",
+    "images/akmugif.gif"
+];
 
 var suffleImages= []; //check
 
 function display_stats () {
+    if(match_counter === 0) {
+        accuracy = "0 %";
+    } else {
+        accuracy =  Math.floor(match_counter / attempts * 100) + "%";
+    }
     $('.games-played .value').text(games_played);
     $('.attempts .value').text(attempts);
-    accuracy + "&percnt;";
     $('.accuracy .value').text(accuracy);
 }
 
@@ -89,20 +104,6 @@ function card_clicked(){
     if(noClickable) {
         return;
     }
-    
-    var gifs = [
-        "images/iugif1.gif",
-        "images/blackpinkgif2.gif",
-        "images/exogif2.gif",
-        "images/btsgif.gif",
-        "images/twicegif.gif",
-        "images/mamamoogif.gif",
-        "images/redvelvetgif.gif",
-        "images/snsdgif.gif",
-        "images/akmugif.gif"
-    ];
-
-
     if(first_card_clicked === null){
         $(this).hide();
         first_card = $(this);
@@ -111,6 +112,7 @@ function card_clicked(){
         second_card = $(this);
         second_card_clicked = $(this).prev().find(".frontimage").attr("src");
         if(first_card_clicked === second_card_clicked) {
+            match_counter++;
             var gif=null;
             switch (second_card_clicked) {
                 case "images/akmu2.png":
@@ -142,7 +144,16 @@ function card_clicked(){
                 break;
             }
             $('.tvcover').css("background-image","url("+gif+')');
-            match_counter++;
+            if(match_counter === total_possible_matches) {
+                $('.modal').show();
+                $('.attemptresult').text(attempts+1);
+                $('.accuracyresult').text(accuracy);
+                $('.modal').on('click','.retrybtn',function(){
+                    reset_game();
+                    $('.modal').hide();
+                });
+            }
+            
             matches++;
             attempts++;
             $(this).hide();
@@ -176,10 +187,12 @@ function reset_stats() {
 
 function reset_game(){
     games_played++;
+    match_counter = 0;
     suffleCards(frontimages); 
     reset_stats();
     display_stats();
     $('.back').show();
     $('.card').css({"background-color":"#f9ca24"})
     $('.tvcover').removeAttr('style');
+    $('.accuracy .value').text("0 %");
 }
