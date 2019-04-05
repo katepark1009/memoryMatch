@@ -1,11 +1,10 @@
 $(document).ready(initializeApp);
 
 function initializeApp(){
-    suffleCards(frontimages);
     makeCard();
     display_stats();
     $('.card').on('click','.back',card_clicked);
-    $('.reset').click(reset_game);
+    $('.gamestats').on('click','.reset', reset_game);
 }
 
 var first_card_clicked = null;
@@ -19,7 +18,6 @@ var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
 var noClickable = false;
-console.log(frontimages);
 
 var frontimages = [
     "images/akmu2.png",
@@ -42,6 +40,10 @@ var frontimages = [
     "images/exo2 (2).png"
 ]
 
+
+
+var suffleImages= []; //check
+
 function display_stats () {
     $('.games-played .value').text(games_played);
     $('.attempts .value').text(attempts);
@@ -50,6 +52,7 @@ function display_stats () {
 }
 
 function makeCard(){
+    suffleCards(frontimages); 
     for(var i = 0 ; i < 18 ; i++ ) {
         var row1 = $('.row1');
         var cardcontainer = $('<div class="cardcontainer">');
@@ -58,29 +61,48 @@ function makeCard(){
         var back = $('<div class="back"></div>');
         var frontImg = $('<img class="frontimage"></img>')
         var backImg = $('<div class="backimage 1"></div>')
-        var src = frontimages[i];
+        var src = suffleImages[i]; //check
         var img = $(frontImg).attr("src", src)
         $(front).append(img);
         $(back).append(backImg);
         $(card).append(front, back);
         $(cardcontainer).append(card);
-        row1.append(cardcontainer);
+        row1.append(cardcontainer);    
     }
 }
     
-function suffleCards(arr) {
-    //arr.sort(() => Math.random() - 0.5);
+function suffleCards(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    suffleImages = a; 
+    console.log(a);
+    console.log(suffleImages);
 }
     
 
 function card_clicked(){
-    // if(games_played === 0) {
-    //     games_played = 1;
-// 
+    if(games_played === 0) {
+        games_played = 1;
+    }
     if(noClickable) {
         return;
     }
     
+    var gifs = [
+        "images/iugif1.gif",
+        "images/blackpinkgif2.gif",
+        "images/exogif2.gif",
+        "images/btsgif.gif",
+        "images/twicegif.gif",
+        "images/mamamoogif.gif",
+        "images/redvelvetgif.gif",
+        "images/snsdgif.gif",
+        "images/akmugif.gif"
+    ];
+
+
     if(first_card_clicked === null){
         $(this).hide();
         first_card = $(this);
@@ -89,6 +111,37 @@ function card_clicked(){
         second_card = $(this);
         second_card_clicked = $(this).prev().find(".frontimage").attr("src");
         if(first_card_clicked === second_card_clicked) {
+            var gif=null;
+            switch (second_card_clicked) {
+                case "images/akmu2.png":
+                gif = gifs[8];
+                break;
+                case "images/blackpink22.png":
+                gif = gifs[1];
+                break;
+                case "images/iu32.png":
+                gif = gifs[0];
+                break;
+                case "images/mamamoo2.png":
+                gif = gifs[5];
+                break;
+                case "images/redvelvet3.png":
+                gif = gifs[6];
+                break;
+                case "images/snsd22.png":
+                gif = gifs[7];
+                break;
+                case "images/twice23.png":
+                gif = gifs[4];
+                break;
+                case "images/bts2.png":
+                gif = gifs[3];
+                break;
+                case "images/exo2 (2).png":
+                gif = gifs[2];
+                break;
+            }
+            $('.tvcover').css("background-image","url("+gif+')');
             match_counter++;
             matches++;
             attempts++;
@@ -96,10 +149,7 @@ function card_clicked(){
             first_card.parent().css({"background-color":"#a29bfe"})
             second_card.parent().css({"background-color":"#a29bfe"})
             first_card_clicked = null;
-            second_card_clicked = null;
-            if (match_counter === total_possible_matches) {
-                console.log("matched!")
-            }
+            second_card_clicked = null;        
         } else {
             noClickable = true;
             $(this).hide();
@@ -116,16 +166,20 @@ function card_clicked(){
     display_stats();
 }
 
+
 function reset_stats() {
     accuracy = 0;
-    matches++;s
+    matches++;
     attempts = 0;
     display_stats();
 }
 
 function reset_game(){
     games_played++;
+    suffleCards(frontimages); 
     reset_stats();
     display_stats();
-    $('.card').remove();
+    $('.back').show();
+    $('.card').css({"background-color":"#f9ca24"})
+    $('.tvcover').removeAttr('style');
 }
