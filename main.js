@@ -2,6 +2,7 @@ $(document).ready(initializeApp);
 
 function initializeApp(){
     $('.modal').hide();
+    $('.remote').hide();
     makeCard();
     display_stats();
     $('.card').on('click','.back',card_clicked);
@@ -57,7 +58,7 @@ var suffleImages= []; //check
 
 function display_stats () {
     if(match_counter === 0) {
-        accuracy = "0 %";
+        accuracy = "  0 %";
     } else {
         accuracy =  Math.floor(match_counter / attempts * 100) + "%";
     }
@@ -92,8 +93,6 @@ function suffleCards(a) {
         [a[i], a[j]] = [a[j], a[i]];
     }
     suffleImages = a; 
-    console.log(a);
-    console.log(suffleImages);
 }
     
 
@@ -112,6 +111,8 @@ function card_clicked(){
         second_card = $(this);
         second_card_clicked = $(this).prev().find(".frontimage").attr("src");
         if(first_card_clicked === second_card_clicked) {
+            $('.remote').fadeIn(700);
+            $('.remote').fadeOut();
             match_counter++;
             var gif=null;
             switch (second_card_clicked) {

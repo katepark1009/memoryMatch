@@ -7,6 +7,8 @@
     <title>Memory matching game</title>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="jquery.vide.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+    <script src="main.js"></script>
     <linkf
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,9 +16,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="style2.css" />
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
-    <script src="main.js"></script>
   </head>
   <body data-vide-bg="videos/particles2">
     <!--header start-->
@@ -24,29 +23,29 @@
            <div class="title">
               <p>Memory Matching Game</p>
            </div>
-              <a href="#">Click for link</a>
+              <a href="#">About</a>
     </div>
     <!--header ends, game row starts-->
     <div class='row'>
         <div class="gamestats">
-            <div class='logocontainer col-sm-1 col-lg-1'>
-            </div>
-            <h3>STATS</h3>
-            <br>
-            <div class="games-played">
-                <label class="label">Games Played</label>
-                <div class="value"></div>
-            </div>
-            <div class="attempts">
-                <label class="label">attempts</label>
-                <div class="value"></div>
-            </div>
-            <div class="accuracy">
-                <label class="label">Accuracy</label>
-                <div class="value"></div>
-            </div>
-            <br>
-            <button class="reset">Reset</button>
+          <p class="statstitle">STATS</p>
+          <br>
+          <div class="games-played">
+            <label class="label">Games Played</label>
+            <div class="value"></div>
+          </div>
+          <div class="attempts">
+            <label class="label">attempts</label>
+            <div class="value"></div>
+          </div>
+          <div class="accuracy">
+            <label class="label">Accuracy</label>
+            <div class="value"></div>
+          </div>
+          <br>
+          <button class="reset">Reset</button>
+          <div class='logocontainer col-sm-1 col-lg-1'>
+          </div>
         </div>
     <!--game stat ends-->
 
@@ -60,17 +59,15 @@
                 
             </div> 
             <div class="cardset">
-              <div class ='cardsAreaBackground'>
-                <div class="row row1">
-                
-                </div>
+              <div class="row row1">
               </div>  
             </div>        
 
-    <!--game area ends-->    
+    <!--game area ends--> 
+    <div class="remote"></div>
     </div>
     <div class="modal">
-      <h3 class="message">Congratulation!</h3>
+      <p class="message">Congratulations!</p>
       <p>Total attempt: </p><p class="attemptresult"></p>
       <p>Your Accuracy: </p><p class="accuracyresult"></p>
       <div class="options">
