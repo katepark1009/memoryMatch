@@ -204,7 +204,6 @@ function card_clicked(){
     display_stats();
 }
 
-
 function reset_stats() {
     accuracy = 0;
     matches++;
@@ -215,12 +214,11 @@ function reset_stats() {
 function reset_game(){
     games_played++;
     match_counter = 0;
-    console.log('suffleimg',suffleImages); //front이미지 지우고 다시 만들기
+    console.log('suffleimg',suffleImages); 
     suffleCards(suffleImages); 
     reset_stats();
     display_stats();
     $('.back').show();
-    // $('.card').css({"background-color":"#f9ca24"});
     $('.card').css({"background-image":'url("images/yellow.gif")'});
     $('.tvcover').removeAttr('style');
     $('.accuracy .value').text("0 %");
