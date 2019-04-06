@@ -45,11 +45,27 @@ body {
 .logocontainer {
   position: relative;
   left: 20%;
+  bottom: 3%;
   background-image: url("images/logo3.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 12vh;
   width: 10vw;
+}
+.speakerbtn{
+  position: absolute;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 15%;
+  height: 8%;
+  left: 101%;
+  top: 91%;
+  cursor: pointer;
+  background-image: url('images/speaker-icon-png-8.jpg');
+  z-index: 5000;
+}
+.mutebtn{
+  background-image: url('images/white-speaker-muted-hi.png');
 }
 a:focus {
   outline: none;
@@ -69,6 +85,8 @@ a {
 }
 .statstitle{
   font-size: 1.7rem;
+  margin-bottom: 5%;
+  margin-top: 10%;
 }
 .gamestats {
   font-size: 1.5rem;
@@ -155,7 +173,10 @@ a {
   margin-top: 0.9%;
   margin-left: 1.5%;
   display: inline-block;
-  background-color: #2c2c54;
+  /* background-color: #2c2c54; */
+  background-image: url("images/container.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   box-shadow: 3px 3px 2px rgba(247,242,247,0.7);
   height: 20vh;
   width: 11vw;
@@ -168,12 +189,14 @@ a {
   top: 5%;
   height: 90%;
   width: 90%;
-  background-color: #f9ca24;
+  /* background-color: #f9ca24; */
+  background-image: url("images/yellow.gif");
   position: relative;
   justify-content: center;
   align-content: center;
   border-radius: 15px;
-  /* float: left; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .front {
   position: absolute;
@@ -181,10 +204,8 @@ a {
   top: 5%;
   height: 90%;
   width: 90%;
-  /* background-color: pink; */
   justify-content: center;
   align-content: center;
-  /* background-image: url("images/blackpink22.png"); */
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -265,21 +286,17 @@ img {
   box-shadow: 0 0 0 black;
   transition: all 0.2s;
 }
-
 .retrybtn:last-child {
   margin: 0;
 }
-
 .retrybtn:hover {
   box-shadow: 0.4rem 0.4rem 0 black;
   transform: translate(-0.4rem, -0.4rem);
 }
-
 .retrybtn:active {
   box-shadow: 0 0 0 black;
   transform: translate(0, 0);
 }
-
 .options {
   display: flex;
   flex-direction: row;
@@ -305,22 +322,35 @@ img {
   }
 }
 
-
+/* @media screen and (max-width: 2560px) {
+  .title {
+    right: 28%;
+  }
+} */
+@media screen and (max-width: 1300px) {
+  .title {
+    right: 12%;
+  }
+}
+@media screen and (max-width: 1165px) {
+  .title {
+    right: 8%;
+  }
+}
 @media screen and (max-width: 992px) {
   .title p {
     font-size: 2.2rem;
   }
   .title {
-    right: 22%;
+    right: 18%;
   }
 }
-
 @media screen and (max-width: 650px) {
   .title p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .title {
-    right: 7%;
+    right: 13%;
   }
   a {
     top: 13%;
