@@ -129,7 +129,7 @@ function card_clicked(){
         second_card_clicked = $(this).prev().find(".frontimage").attr("src");
         if(first_card_clicked === second_card_clicked) {
             $('.second_card').css("transform", "rotateY( 180deg )");
-            $('.remote').fadeIn(700);
+            $('.remote').fadeIn(900);
             $('.remote').fadeOut();
             match_counter++;
             var gif=null;
@@ -234,6 +234,7 @@ function playSound(src) {
     }
     player = new Audio(src);
     player.volume = .2;
+    player.loop = true;
     if (!mute) {
         player.play();
     }

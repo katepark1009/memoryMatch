@@ -45,12 +45,12 @@ body {
 .logocontainer {
   position: relative;
   left: 20%;
-  bottom: 3%;
+  bottom: 6%;
   background-image: url("images/logo3.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 12vh;
-  width: 10vw;
+  width: 9vw;
 }
 .speakerbtn{
   position: absolute;
@@ -91,6 +91,7 @@ a {
 .gamestats {
   font-size: 1.5rem;
   position: absolute;
+  border-radius: 15px;
   width: 15%;
   height:70%;
   float: left;
@@ -106,7 +107,7 @@ a {
 .reset {
   all: unset;
   cursor: pointer;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   padding: 6%;
   background-color:#3c6382;
   font-family: 'Righteous', cursive;
@@ -114,6 +115,16 @@ a {
   box-shadow: 2px 3px 3px #041310;
   margin-bottom: 10%;
   z-index: 5000;
+  /* */
+  border-radius:10px;
+	border-bottom:4px solid rgb(4, 24, 14);
+  box-shadow: 6px 6px 6px #999;
+  transition: all .05s linear;
+}
+.reset:active {
+	box-shadow: 2px 2px 2px #777;
+	border-bottom:1px solid rgb(4, 24, 14);
+	transform: translateY(3px);
 }
 .reset:hover {
   background-color: #8c7ae6;
@@ -244,7 +255,7 @@ img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("images/remote.gif");
-  z-index: 2000;
+  z-index: 3000;
   height: 37%;
   width: 22%;
   position: absolute;
