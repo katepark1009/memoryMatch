@@ -25,16 +25,7 @@ var noClickable = false;
 var player = null;
 var mute = false;
 
-var frontimages = [
-    "images/akmu2.png",
-    "images/blackpink22.png",
-    "images/iu32.png",
-    "images/mamamoo2.png",
-    "images/redvelvet3.png",
-    "images/snsd22.png",
-    "images/twice23.png",
-    "images/bts2.png",
-    "images/exo2 (2).png",
+var imagesList =  [
     "images/akmu2.png",
     "images/blackpink22.png",
     "images/iu32.png",
@@ -45,6 +36,8 @@ var frontimages = [
     "images/bts2.png",
     "images/exo2 (2).png"
 ]
+
+var frontimages = imagesList.concat(imagesList);
 
 var gifs = [
     "images/iugif1.gif",
@@ -69,7 +62,7 @@ var musicSrc = [
     "songs/twice.mp3"
 ]
 
-var suffleImages= []; //check
+var suffleImages= []; 
 
 function display_stats () {
     if(match_counter === 0) {
@@ -91,7 +84,7 @@ function makeCard(){
         var card = $('<div class="card"></div>');
         var front = $('<div class="front"></div>');
         var back = $('<div class="back"></div>');
-        var frontImg = $('<img class="frontimage"></img>')
+        var frontImg = $('<img class="frontimage" />')
         var backImg = $('<div class="backimage 1"></div>')
         var src = suffleImages[i]; //check
         var img = $(frontImg).attr("src", src)
@@ -105,8 +98,8 @@ function makeCard(){
 }
     
 function suffleCards(a) {
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+    for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
     }
     suffleImages = a; 
@@ -120,7 +113,6 @@ function card_clicked(){
         return;
     }
     if(first_card_clicked === null){
-
         $(this).hide();
         first_card = $(this);
         first_card_clicked = $(this).prev().find(".frontimage").attr("src");
@@ -214,7 +206,6 @@ function reset_stats() {
 function reset_game(){
     games_played++;
     match_counter = 0;
-    console.log('suffleimg',suffleImages); 
     suffleCards(suffleImages); 
     reset_stats();
     display_stats();
@@ -225,7 +216,7 @@ function reset_game(){
     makeCard();
     player.muted = true;
 }
-
+ 
 function playSound(src) {
     if (player) {
         player.pause();
