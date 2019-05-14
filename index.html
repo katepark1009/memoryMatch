@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Memory matching game</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="jquery.vide.min.js"></script>
+    <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
+    <script src="main.js"></script>
+    <linkf
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style2.css" />
+  </head>
+  <body>
+    <!--header start-->
+    <div class="row header">     
+      <div class="title">
+        <div class="musicgif"></div>
+        <div class="titletext"><p>Memory Matching Game</p></div>
+        <div class="musicgif"></div>
+      </div>
+        <a href="about.html" class="link" target="_blank">About</a>
+    </div>
+    <!--header ends, game row starts-->
+    <div class='row'>
+      <div class="gamestats">
+        <p class="statstitle">STATS</p>
+        <!-- <br> -->
+        <div class="games-played">
+          <label class="label">Games Played</label>
+          <div class="value"></div>
+        </div>
+        <div class="attempts">
+          <label class="label">Attempts</label>
+          <div class="value"></div>
+        </div>
+        <div class="accuracy">
+          <label class="label">Accuracy</label>
+          <div class="value"></div>
+        </div>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+    <!--game stat ends-->
+
+    <!--game area starts-->     
+    <div class="game-area">
+      <div class='tvcontainer'>
+        <img class="tv" src="images/tv2.gif" />
+        <div class="tvcoverblue"></div>
+        <div class="tvcover"></div>
+        <div class='speakerbtn'></div>      
+      </div> 
+      <!--cards-->
+      <div class="cardset">
+        <div class="row row1">
+        </div>  
+      </div>        
+    <!--game area ends--> 
+      <div class="remote"></div>
+    </div>
+    <!--modal--> 
+    <div class="modal">
+      <p class="message">Congratulations!</p>
+      <p>Total attempt: </p><p class="attemptresult"></p>
+      <p>Your Accuracy: </p><p class="accuracyresult"></p>
+      <div class="options">
+        <button class="retrybtn">Retry</button>
+      </div>
+    </div>     
+  </body>
+</html>
