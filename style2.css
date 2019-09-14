@@ -1,15 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300");
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-@import url('https://fonts.googleapis.com/css?family=Exo');
-@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat|Permanent+Marker|Righteous|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Lobster', cursive;
 font-family: 'Righteous', cursive;
-font-family: 'Concert One', cursive;
+font-family: 'Ubuntu', sans-serif;
 font-family: 'Permanent Marker', cursive; */
 
 *,
@@ -28,6 +24,10 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+label, button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 .row {
   margin: 0;
@@ -66,11 +66,11 @@ body {
   left: 98%;
   top: 91%;
   cursor: pointer;
-  background-image: url('https://i.imgur.com/BXjaVle.png');
+  background-image: url('images/speaker-icon-png-8.jpg');
   z-index: 5000;
 }
 .mutebtn{
-  background-image: url('https://i.imgur.com/d6pQWAM.png');
+  background-image: url('images/white-speaker-muted-hi.png');
 }
 a:focus {
   outline: none;
@@ -85,7 +85,8 @@ a:hover {
   text-decoration: none;
   top: 5px;
   right: 6%;
-  font-family: 'Righteous', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   color: #487bef;
 }
 .setting{
@@ -113,9 +114,10 @@ a:hover {
   text-align: center;
   padding-top: 1%; 
   font-size: 1em;
-  font-family: 'Righteous', cursive;
   margin: 10px auto;
   text-align: center;
+  font-weight: 600;
+  height: 6vh;
 }
 .gamestats div{
   padding:0;
@@ -125,7 +127,6 @@ a:hover {
   cursor: pointer;
   padding: 6%;
   background-color:#7444d4;
-  font-family: 'Righteous', cursive;
   color: white;
   box-shadow: 2px 3px 3px #041310;
   margin-bottom: 10%;
@@ -135,6 +136,10 @@ a:hover {
 	border-bottom:4px solid rgb(4, 24, 14);
   box-shadow: 3px 3px 3px #999;
   transition: all .05s linear;
+  font-family: 'Montserrat', sans-serif;
+  width: 50%;
+  position: relative;
+  top: -6px;
 }
 .reset:active {
 	box-shadow: 2px 2px 2px #777;
@@ -163,11 +168,11 @@ a:hover {
   height: 80%;
 } 
 .tvcontainer {
-  /* position: absolute;
-  top: 46%;
-  width: 20%;
-  height: 45%;
-  left: 0%; */
+  position: absolute;
+  top: 68%;
+  width: 62%;
+  left: 12%;
+  height: 30%;
 }
 .tv {
   top: 10%;
@@ -197,12 +202,12 @@ a:hover {
   margin-top: 0.9%;
   margin-left: 1.5%;
   display: inline-block;
-  background-image: url("https://i.imgur.com/LV1oF4w.jpg");
+  background-image: url("images/container.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   box-shadow: 3px 3px 2px rgba(247,242,247,0.7);
-  height: 22vh;
-  width: 14%;
+  height: 15vh;
+  width: 15%;
   justify-content: center;
   align-content: center;
   border-radius: 15px;
@@ -212,7 +217,7 @@ a:hover {
   top: 5%;
   height: 90%;
   width: 90%;
-  background-image: url("https://i.imgur.com/JWYigk8.gif");
+  background-image: url("images/yellow.gif");
   position: relative;
   border-radius: 5px;
   background-repeat: no-repeat;
@@ -240,7 +245,7 @@ a:hover {
   /* opacity: 0.6; */
   background-color: pink;
   border-radius: 5px;
-  background-image: url("https://i.imgur.com/z0FiaCr.jpg");
+  background-image: url("images/logo1.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -261,17 +266,17 @@ img {
 .remote{
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url("https://i.imgur.com/J9NH0it.gif");
+  background-image: url("images/remote.gif");
   z-index: 3000;
-  height: 37%;
-  width: 22%;
+  height: 17%;
+  width: 39%;
   position: absolute;
-  top: 63%;
-  left: 9%;
+  top: 81%;
+  left: -4%;
 }
 /* modal */
 .modal {
-  font-family: 'Righteous', cursive;
+  font-family: 'Montserrat', sans-serif;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -295,7 +300,8 @@ img {
 }
 .retrybtn {
   color:inherit;
-  font-family:inherit;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: inherit;
   background: white;
   padding: 0.3rem 3.4rem;
@@ -330,6 +336,9 @@ img {
   text-align: center;
   top: 10px;
 }
+.label{
+  margin-bottom: 0;
+}
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -347,64 +356,71 @@ img {
     transform: translate3d(2px, 0, 0);
   }
 }
-@media screen and (max-width: 2560px) {
-  .musicgif {
-    left: 30%;
-  }
-  /* .statstitle{
-    font-size: 2.5rem;
-  }
-  */
-  /* .games-played, .accuracy, .attempts {
-    font-size: 1.7rem;
-  } */
-  .statstitle {
-    font-size: 2rem;
-  }
-  .link{
-    font-size: 1.5rem;
-  }
-} 
-@media screen and (max-width: 1300px) {
-  .musicgif {
-    left: 27%;
-  }
-}
+
+
 @media screen and (max-width: 1165px) {
   .link{
     font-size: 1rem;
   }
+  .titletext h2 {
+    font-size: 3rem;
+  }
 }
-@media screen and (max-width: 992px) {
 
+
+@media screen and (max-width: 992px) {
+  .titletext h2 {
+    font-size: 3rem;
+  }
   a {
     top: 13%;
     right: 8%;
-    font-size: 0.5rem;
+    font-size: 1.5rem;
   }
   .link{
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+  .tvcontainer{
+    top: 70%;
+    width: 62%;
+    left: 12%;
+    height: 29%;
+  }
+  .reset {
+    top: 5px;
+  }
+  .speakerbtn {
+    top: 78%;
+  }
+  .gamestats {
+    height: 55%;
   }
 }
+
+
 @media screen and (max-width: 650px) {
+  .titletext h2 {
+    font-size: 2.3rem;
+  }
   a {
     top: 13%;
     right: 10%;
-    font-size: 0.5rem;
   }
   .gamestats, .statstitle, .accuracy, .attempts, .games-played {
     font-size: 0.6rem;
   }
+  .gamestats{
+    height: 78%;
+  }
   .musicgif {
     display: none;
   }
-  /* .tvcontainer {
-    position: absolute;
-    top: 58%;
-    width: 23%;
-    height: 20%;
-    left: -2%;
-  } */
+  .tvcontainer {
+    top: 68%;
+    width: 62%;
+    left: 12%;
+    height: 30%;
+  }
   .link{
     font-size: 1rem;
   }
@@ -412,13 +428,22 @@ img {
     width : 50%;
   }
   .speakerbtn {
-    width: 30%;
-    height: 18%;
-    left: 67%;
-    top: 100%;
+    width: 18%;
+    height: 11%;
+    left: 98%;
+    top: 76%;
   }
   /* .cardcontainer {
     height: 15vh;
     width: 16vw;
   } */
+  label {
+    font-size: .8rem;
+  }
+  .reset {
+    font-size: .8rem;
+    margin: 0;
+  }
 } 
+
+
