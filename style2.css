@@ -117,7 +117,8 @@ a:hover {
   margin: 10px auto;
   text-align: center;
   font-weight: 600;
-  height: 6vh;
+  height: 55%;
+  padding-top: 20px;
 }
 .gamestats div{
   padding:0;
@@ -365,6 +366,15 @@ img {
   .titletext h2 {
     font-size: 3rem;
   }
+  .gamestats {
+    height: 55%;
+  }
+  /* .tvcontainer {
+    top: 61%;
+    width: 18%;
+    left: -2%;
+    height: 29%;
+  } */
 }
 
 
@@ -380,10 +390,10 @@ img {
   .link{
     font-size: 1.5rem;
   }
-  .tvcontainer{
-    top: 70%;
-    width: 62%;
-    left: 12%;
+  .tvcontainer {
+    top: 61%;
+    width: 18%;
+    left: -2%;
     height: 29%;
   }
   .reset {
@@ -422,7 +432,7 @@ img {
     height: 30%;
   }
   .link{
-    font-size: 1rem;
+    font-size: .8rem;
   }
   .modal {
     width : 50%;
@@ -441,7 +451,7 @@ img {
     font-size: .8rem;
   }
   .reset {
-    font-size: .8rem;
+    font-size: .7rem;
     margin: 0;
   }
 } 
