@@ -26,12 +26,12 @@ var player = null;
 var mute = false;
 
 var imagesList =  [
-    "https://i.imgur.com/4FinmpC.png",
-    "https://i.imgur.com/iRh9Y3b.png",
-    "https://i.imgur.com/klgLFnR.png",
-    "https://i.imgur.com/YhVQXh1.png",
-    "https://i.imgur.com/yKiGw8S.png",
-    "https://i.imgur.com/fzzpzFq.png",
+    "images/akmu2.png",
+    "images/iu32.png",
+    "images/bts2.png",
+    "images/mamamoo2.png",
+    "images/blackpink22.pngg",
+    "images/redvelvet3.png",
     "images/twice23.png",
     "images/bts2.png",
     "images/exo2 (2).png"
