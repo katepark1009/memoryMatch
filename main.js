@@ -28,13 +28,13 @@ var mute = false;
 var imagesList =  [
     "images/akmu2.png",
     "images/iu32.png",
-    "images/bts2.png",
     "images/mamamoo2.png",
-    "images/blackpink22.pngg",
+    "images/blackpink22.png",
     "images/redvelvet3.png",
     "images/twice23.png",
     "images/bts2.png",
-    "images/exo2 (2).png"
+    "images/exo2 (2).png",
+    "images/snsd22.png"
 ]
 
 var frontimages = imagesList.concat(imagesList);
@@ -232,14 +232,14 @@ function playSound(src) {
     }
     player = new Audio(src);
     player.volume = .2;
-    player.loop = true;
+    player.loop = false;
     if (!mute) {
         player.play();
     }
 }
 
 function toggle_sound(){
-    $('.speakerbtn').css("background-img","url('images/white-speaker-muted-hi.png')");
+    $('.speakerbtn').css("background-img","url('images/mute2.png')");
     mute = !mute;
     player.muted = mute;
     if (!mute) {

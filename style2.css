@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-image: url('https://wallpapersmug.com/download/1920x1080/90848b/kda-akali-league-of-legends-neon.jpg');
+  background-image: url('https://i.ytimg.com/vi/y3w_52Ap4rg/maxresdefault.jpg');
   background-color: #dec4ff;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -65,11 +65,11 @@ label, button {
   width: 18%;
   height: 11%;
   cursor: pointer;
-  background-image: url('images/speaker-icon-png-8.jpg');
+  background-image: url('images/speaker.png');
   z-index: 5000;
 }
 .mutebtn{
-  background-image: url('images/white-speaker-muted-hi.png');
+  background-image: url('images/mute2.png');
 }
 a:focus {
   outline: none;
@@ -362,6 +362,13 @@ img {
   .resetbtn{
     margin-top: 15px;
   }
+  .cardcontainer {
+    height: 18vh;
+  }
+  .speakerbtn {
+    left: 10%;
+    bottom: -1%;
+  }
 }
 
 @media screen and (max-width: 1110px) {
@@ -405,7 +412,10 @@ img {
     top: 5px;
   }
   .speakerbtn {
-    top: 78%;
+    top: 85%;
+    left: 4%;
+    width: 29%;
+    height: 20%;
   }
   .gamestats {
     height: 90%;
@@ -456,13 +466,6 @@ img {
   .modal {
     width : 50%;
   }
-  .speakerbtn {
-    width: 18%;
-    height: 11%;
-    left: 98%;
-    top: 76%;
-  }
-
   label, .value {
     font-size: .8rem;
   }
@@ -486,7 +489,7 @@ img {
     font-size: 1.2rem;
   }
   label, .value {
-    font-size: .5rem;
+    font-size: .6rem;
   }
   .reset {
     font-size: .5rem;
@@ -505,6 +508,6 @@ img {
     padding: 3px;
   }
   .cardcontainer {
-    height: 24vh;
+    height: 19vh;
   }
 }
