@@ -283,6 +283,7 @@ img {
   background: white;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  text-align: center;
 }
 .message {
   font-size: 2rem;
@@ -494,6 +495,14 @@ img {
   .reset {
     font-size: .5rem;
   }
+  .modal p {
+    margin-bottom: 10px;
+    font-size: .7rem;
+  }
+  #message {
+    font-weight: 700;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-device-width: 400px) and (max-device-width: 1024px) and (orientation:landscape) {
@@ -509,5 +518,9 @@ img {
   }
   .cardcontainer {
     height: 19vh;
+  }
+  .message{
+    font-weight: 700;
+    font-size: 1rem;
   }
 }
