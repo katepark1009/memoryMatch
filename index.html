@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Memory matching game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="jquery.vide.min.js"></script>
     <script src="http://learning-fuze.github.io/memory_match/v0.1/script.js"></script>
     <script src="main.js"></script>
     <linkf
@@ -19,60 +19,64 @@
   </head>
   <body>
     <!--header start-->
-    <div class="row header">     
-      <div class="title">
-        <div class="musicgif"></div>
-        <div class="titletext"><p>Memory Matching Game</p></div>
-        <div class="musicgif"></div>
-      </div>
+    <div class="row header">
         <a href="about.html" class="link" target="_blank">About</a>
+        <!-- <div class="musicgif"></div> -->
+        <div class="titletext col-12"><h2>K-POP Memory Match</h2></div>
+        <!-- <div class="subtitle">The brain can be exercised throughout life.</div> -->
+        <!-- <div class="musicgif"></div> -->
     </div>
     <!--header ends, game row starts-->
-    <div class='row'>
-      <div class="gamestats">
-        <p class="statstitle">STATS</p>
-        <!-- <br> -->
-        <div class="games-played">
-          <label class="label">Games Played</label>
-          <div class="value"></div>
+    <div class="row">
+      <div class='statRow col-sm-12 col-md-2'>
+        <div class="gamestats row">
+          <!-- <br> -->
+
+              <div class='stat col-2 col-md-12 tvcontainer' id='tv'>
+                  <img class="tv" src="images/tv2.gif" />
+                  <div class="tvcoverblue"></div>
+                  <div class="tvcover"></div>
+                  <div class='speakerbtn'></div>
+                </div>
+              <!-- <div class="remote"></div> -->
+
+          <div class="stat col-2 col-md-12 games-played">
+            <label class="label">Played</label>
+            <div class="value"></div>
+          </div>
+          <div class="stat col-2 col-md-12 attempts">
+            <label class="label">Attempts</label>
+            <div class="value"></div>
+          </div>
+          <div class="stat col-2 col-md-12 accuracy">
+            <label class="label">Accuracy</label>
+            <div class="value"></div>
+          </div>
+          <div class='stat resetbtn col-2 col-md-12'>
+            <button class="reset">Reset</button>
+          </div>
         </div>
-        <div class="attempts">
-          <label class="label">Attempts</label>
-          <div class="value"></div>
-        </div>
-        <div class="accuracy">
-          <label class="label">Accuracy</label>
-          <div class="value"></div>
-        </div>
-        <button class="reset">Reset</button>
       </div>
-    </div>
     <!--game stat ends-->
 
-    <!--game area starts-->     
-    <div class="game-area">
-      <div class='tvcontainer'>
-        <img class="tv" src="images/tv2.gif" />
-        <div class="tvcoverblue"></div>
-        <div class="tvcover"></div>
-        <div class='speakerbtn'></div>      
-      </div> 
+    <!--game area starts-->
+      <div class="game-area row col-sm-12 col-md-10">
       <!--cards-->
-      <div class="cardset">
-        <div class="row row1">
-        </div>  
-      </div>        
-    <!--game area ends--> 
-      <div class="remote"></div>
+        <div class="cardset"></div>
+      </div>
     </div>
-    <!--modal--> 
+    <!--game area ends-->
+    <p class="copyright">All copyrights reserved © Kate Park</p>
+
+    <!--modal-->
     <div class="modal">
-      <p class="message">Congratulations!</p>
+      <p id="message" class="message">Congratulations!</p>
       <p>Total attempt: </p><p class="attemptresult"></p>
       <p>Your Accuracy: </p><p class="accuracyresult"></p>
       <div class="options">
         <button class="retrybtn">Retry</button>
       </div>
-    </div>     
+    </div>
+    
   </body>
 </html>

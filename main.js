@@ -27,14 +27,14 @@ var mute = false;
 
 var imagesList =  [
     "images/akmu2.png",
-    "images/blackpink22.png",
     "images/iu32.png",
     "images/mamamoo2.png",
+    "images/blackpink22.png",
     "images/redvelvet3.png",
-    "images/snsd22.png",
     "images/twice23.png",
     "images/bts2.png",
-    "images/exo2 (2).png"
+    "images/exo2 (2).png",
+    "images/snsd22.png"
 ]
 
 var frontimages = imagesList.concat(imagesList);
@@ -76,23 +76,32 @@ function display_stats () {
 }
 
 function makeCard(){
-    $('.row1').empty();
+    $('.cardset').empty();
     suffleCards(frontimages); 
-    for(var i = 0 ; i < 18 ; i++ ) {
-        var row1 = $('.row1');
-        var cardcontainer = $('<div class="cardcontainer">');
-        var card = $('<div class="card"></div>');
-        var front = $('<div class="front"></div>');
-        var back = $('<div class="back"></div>');
-        var frontImg = $('<img class="frontimage" />')
-        var backImg = $('<div class="backimage 1"></div>')
-        var src = suffleImages[i]; //check
-        var img = $(frontImg).attr("src", src)
-        $(front).append(img);
-        $(back).append(backImg);
-        $(card).append(front, back);
-        $(cardcontainer).append(card);
-        row1.append(cardcontainer);    
+    var suffleDeck;
+    var suffle1 = suffleImages.slice(0,6);
+    var suffle2 = suffleImages.slice(6,12);
+    var suffle3 = suffleImages.slice(12,18);
+    suffleDeck = [ suffle1, suffle2, suffle3 ];
+    for(var j = 0 ; j < 3 ; j++ ) {
+        var cardSet = $('.cardset');
+        var newRow = $(`<div class="row cardRow"></div>`)
+      for(var i = 0 ; i < 6 ; i++ ) {
+          var cardcontainer = $('<div class="cardcontainer">');
+          var card = $('<div class="card"></div>');
+          var front = $('<div class="front"></div>');
+          var back = $('<div class="back"></div>');
+          var frontImg = $('<img class="frontimage" />')
+          var backImg = $('<div class="backimage 1"></div>')
+          var src = suffleDeck[j][i]; //check
+          var img = $(frontImg).attr("src", src)
+          $(front).append(img);
+          $(back).append(backImg);
+          $(card).append(front, back);
+          $(cardcontainer).append(card);
+          newRow.append(cardcontainer);    
+      }
+      cardSet.append(newRow);
     }
     $('.card').on('click','.back',card_clicked);
 }
@@ -223,14 +232,14 @@ function playSound(src) {
     }
     player = new Audio(src);
     player.volume = .2;
-    player.loop = true;
+    player.loop = false;
     if (!mute) {
         player.play();
     }
 }
 
 function toggle_sound(){
-    $('.speakerbtn').css("background-img","url('images/white-speaker-muted-hi.png')");
+    $('.speakerbtn').css("background-img","url('images/mute2.png')");
     mute = !mute;
     player.muted = mute;
     if (!mute) {

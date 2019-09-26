@@ -1,25 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300");
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-@import url('https://fonts.googleapis.com/css?family=Exo');
-@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat|Permanent+Marker|Righteous|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 font-family: 'Lobster', cursive;
 font-family: 'Righteous', cursive;
-font-family: 'Concert One', cursive;
+font-family: 'Ubuntu', sans-serif;
 font-family: 'Permanent Marker', cursive; */
 
 *,
 html {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-image: url('images/v.gif');
+  background-image: url('https://i.ytimg.com/vi/y3w_52Ap4rg/maxresdefault.jpg');
+  background-color: #dec4ff;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding:0;
@@ -28,10 +26,18 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+label, button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.row {
+  margin: 0;
+}
 .header {
-  height: 15vh;
+  height: 18vh;
   width: 100%;
   position: relative;
+  align-items: center;
 }
 .title {
   position: relative;
@@ -43,7 +49,7 @@ body {
 .musicgif{
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url("images/giphy2.gif");
+  background-image: url("https://i.imgur.com/nNhDQwc.gif");
   z-index: 3000;
   height: 5vh;
   width: 6vw;
@@ -56,16 +62,14 @@ body {
   position: absolute;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 15%;
-  height: 8%;
-  left: 98%;
-  top: 91%;
+  width: 18%;
+  height: 11%;
   cursor: pointer;
-  background-image: url('images/speaker-icon-png-8.jpg');
+  background-image: url('images/speaker.png');
   z-index: 5000;
 }
 .mutebtn{
-  background-image: url('images/white-speaker-muted-hi.png');
+  background-image: url('images/mute2.png');
 }
 a:focus {
   outline: none;
@@ -78,17 +82,18 @@ a:hover {
 .link {
   position: absolute;
   text-decoration: none;
-  top: 13%;
-  right: 10%;
-  font-family: 'Righteous', cursive;
-  color: #487bef;
+  top: 5px;
+  right: 6%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: whitesmoke;
 }
 .setting{
   position: absolute;
   text-decoration: none;
   top: 13%;
   right: 15%;
-  font-family: 'Righteous', cursive;
+  font-family: 'Montserrat', sans-serif;
   color: #487bef;
 }
 .statstitle{
@@ -96,28 +101,35 @@ a:hover {
   margin-bottom: 5%;
   margin-top: 13%;
 }
+.statRow{
+  padding:0;
+}
 .gamestats {
   font-size: 1.5rem;
-  position: absolute;
   border-radius: 15px;
-  width: 15%;
-  height:70%;
-  float: left;
+  width: 93%;
   background-color:#c7ecee;
   opacity: 0.85;
   text-align: center;
   padding-top: 1%; 
-  left: 4%;
-  bottom: 23%;
   font-size: 1em;
-  font-family: 'Righteous', cursive;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: 600;
+  height: 55%;
+  display: flex;
+  justify-content: center; 
+  align-content: center;
+  align-items: center;
 }
-.reset {
+.gamestats div{
+  padding:0;
+}
+.reset, .mute {
   all: unset;
   cursor: pointer;
   padding: 6%;
   background-color:#7444d4;
-  font-family: 'Righteous', cursive;
   color: white;
   box-shadow: 2px 3px 3px #041310;
   margin-bottom: 10%;
@@ -127,6 +139,10 @@ a:hover {
 	border-bottom:4px solid rgb(4, 24, 14);
   box-shadow: 3px 3px 3px #999;
   transition: all .05s linear;
+  font-family: 'Montserrat', sans-serif;
+  width: 50%;
+  position: relative;
+  top: 0px;
 }
 .reset:active {
 	box-shadow: 2px 2px 2px #777;
@@ -136,50 +152,40 @@ a:hover {
 .reset:hover {
   background-color:#ff7675;
 }
-.row1 {
-  position: absolute;
-  padding-top: 3%; 
-  width: 100%;
-  height: 81vh;
+.cardRow{
+  text-align: center;
 }
 .game-area {
   width: 100%;
   min-height: 85vh;
+  margin:0;
 }
 .cardset {
-  position: absolute;
-  left: 22%;
-  width: 78%;
+  width: 100%;
   height: 80%;
 } 
-.tvcontainer {
-  position: absolute;
-  top: 46%;
-  width: 20%;
-  height: 45%;
-  left: 0%;
-}
 .tv {
   top: 10%;
-  width: 113%;
+  width: 100%;
+  position: relative;
 }
 .tvcover {
-  position: relative;
+  position: absolute;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  top: -12%;
-  left: 23%;
-  width: 68%;
+  top: 26%;
+  left: 21%;
+  width: 61%;
   height: 49%;
   z-index: 1000;
 }
 .tvcoverblue{
   background-color:blue;
   opacity: 0.3; 
-  position: relative;
-  top: 37%;
-  left: 23%;
-  width: 68%;
+  position: absolute;
+  top: 26%;
+  left: 21%;
+  width: 61%;
   height: 49%;
   z-index: 100;
 }
@@ -191,11 +197,11 @@ a:hover {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   box-shadow: 3px 3px 2px rgba(247,242,247,0.7);
-  height: 22vh;
-  width: 11vw;
+  height: 15vh;
+  width: 15%;
   justify-content: center;
   align-content: center;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .card {
   margin:auto;
@@ -207,6 +213,7 @@ a:hover {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  border-radius: 5px;
 }
 .front {
   position: absolute;
@@ -246,22 +253,21 @@ img {
   width: 100%;
   height: 100%;
   margin:auto;
-  position: absolute;
 }
 .remote{
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("images/remote.gif");
   z-index: 3000;
-  height: 37%;
-  width: 22%;
+  height: 17%;
+  width: 39%;
   position: absolute;
-  top: 63%;
-  left: 9%;
+  top: 81%;
+  left: -4%;
 }
 /* modal */
 .modal {
-  font-family: 'Righteous', cursive;
+  font-family: 'Montserrat', sans-serif;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -277,6 +283,7 @@ img {
   background: white;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  text-align: center;
 }
 .message {
   font-size: 2rem;
@@ -285,7 +292,8 @@ img {
 }
 .retrybtn {
   color:inherit;
-  font-family:inherit;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   font-size: inherit;
   background: white;
   padding: 0.3rem 3.4rem;
@@ -313,15 +321,17 @@ img {
   justify-content: space-between;
 }
 .titletext {
-  display: inline-block;
   position: relative;
-  left: 24%;
-  margin-right: 1%;
-  margin-left: 1%;
-  font-family: 'Concert One', cursive;
-  font-size: 4rem;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 2px 0 #bbb, 0 3px 0 #b9b9b9, 0 4px 0 #aaa, 0 5px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
   color: #fff;
+  text-align: center;
+  top: 10px;
+}
+.label{
+  margin-bottom: 0;
+}
+.stat {
+  margin: 0 3px;
 }
 @keyframes shake {
   10%, 90% {
@@ -340,98 +350,177 @@ img {
     transform: translate3d(2px, 0, 0);
   }
 }
-@media screen and (max-width: 2560px) {
-  .titletext {
-    font-size: 4rem;
-    left: 30%;
+@media (min-width: 1111px) and (max-width: 2650px) {
+  .titletext h2 {
+    font-size: 3rem;
   }
-  .musicgif {
-    left: 30%;
+  .gamestats {
+    height: 90%;
+    display: flex;
+    align-self: flex-start;
+    align-content: flex-start;
   }
-  /* .statstitle{
-    font-size: 2.5rem;
+  .resetbtn{
+    margin-top: 15px;
   }
-  */
-  /* .games-played, .accuracy, .attempts {
-    font-size: 1.7rem;
-  } */
-  .statstitle {
-    font-size: 2rem;
+  .cardcontainer {
+    height: 18vh;
   }
-  .link{
-    font-size: 1.5rem;
-  }
-} 
-@media screen and (max-width: 1300px) {
-  .titletext {
-    font-size: 3.5rem;
-    left: 27%;
-  }
-  .musicgif {
-    left: 27%;
+  .speakerbtn {
+    left: 10%;
+    bottom: -1%;
   }
 }
-@media screen and (max-width: 1165px) {
-  .titletext {
+
+@media screen and (max-width: 1110px) {
+  .titletext h2 {
     font-size: 3rem;
   }
   .link{
     font-size: 1rem;
   }
+  .titletext h2 {
+    font-size: 3rem;
+  }
+  .gamestats {
+    height: 78%;
+    display: flex;
+    align-self: flex-start;
+    align-content: flex-start;
+    margin-left: 10%;
+  }
+
+  /* .resetbtn{
+    margin-top: 15px;
+  } */
+
 }
+
+
 @media screen and (max-width: 992px) {
-  .titletext {
-    font-size: 2.3rem;
+  .titletext h2 {
+    font-size: 2.5rem;
   }
   a {
     top: 13%;
     right: 8%;
-    font-size: 0.5rem;
+    font-size: 1.5rem;
   }
   .link{
     font-size: 1rem;
   }
+  .reset {
+    top: 5px;
+  }
+  .speakerbtn {
+    top: 85%;
+    left: 4%;
+    width: 29%;
+    height: 20%;
+  }
+  .gamestats {
+    height: 90%;
+    display: flex;
+    align-self: flex-start;
+    align-content: flex-start;
+    margin-left: 10%;
+  }
+  /* .resetbtn{
+    margin-top: 15px;
+  } */
+
 }
-@media screen and (max-width: 650px) {
-  .titletext {
-    font-size: 1.6rem;
-    left: 10%;
+
+@media screen and (max-width: 768px) {
+  .gamestats{
+    height: 87%;
+    padding-top: 0;
+    margin-left: auto;
+  }
+  .game-area {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .titletext h2 {
+    font-size: 1.7rem;
   }
   a {
     top: 13%;
     right: 10%;
-    font-size: 0.5rem;
   }
   .gamestats, .statstitle, .accuracy, .attempts, .games-played {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
-  .gamestats {
-    height: 60%;
+  .gamestats{
+    height: 87%;
+    padding-top: 0;
+    margin-left: auto;
   }
   .musicgif {
     display: none;
   }
-  .tvcontainer {
-    position: absolute;
-    top: 58%;
-    width: 23%;
-    height: 20%;
-    left: -2%;
-  }
   .link{
-    font-size: 1rem;
+    font-size: .8rem;
   }
   .modal {
     width : 50%;
   }
-  .speakerbtn {
-    width: 30%;
-    height: 18%;
-    left: 67%;
-    top: 100%;
+  label, .value {
+    font-size: .8rem;
   }
-  .cardcontainer {
-    height: 15vh;
-    width: 16vw;
+  .reset {
+    font-size: .7rem;
+    margin: 0;
+    width: 61%;
+    padding: 6px;
+  }
+  .header {
+    height: 12vh;
+  }
+  .game-area {
+    padding-top: 10px;
+    margin-top: 15px;
   }
 } 
+
+@media screen and (max-width: 440px) {
+  .titletext h2 {
+    font-size: 1.2rem;
+  }
+  label, .value {
+    font-size: .6rem;
+  }
+  .reset {
+    font-size: .5rem;
+  }
+  .modal p {
+    margin-bottom: 10px;
+    font-size: .7rem;
+  }
+  #message {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 400px) and (max-device-width: 1024px) and (orientation:landscape) {
+  .titletext h2 {
+    font-size: 1.5rem;
+  }
+  label, .value {
+    font-size: .6rem;
+  }
+  .reset {
+    font-size: .7rem;
+    padding: 3px;
+  }
+  .cardcontainer {
+    height: 19vh;
+  }
+  .message{
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
