@@ -6,7 +6,7 @@ function initializeApp(){
     makeCard();
     display_stats();
     $('.gamestats').on('click','.reset', reset_game);
-    $('.tvcontainer').on('click', '.speakerbtn', function(){
+    $('.header').on('click', '.speakerbtn', function(){
         toggle_sound();
         $('.speakerbtn').toggleClass("mutebtn");
     });
@@ -239,7 +239,7 @@ function playSound(src) {
 }
 
 function toggle_sound(){
-    $('.speakerbtn').css("background-img","url('images/mute2.png')");
+    $('.speakerbtn').css("background-img","url('images/mutewhite.png')");
     mute = !mute;
     player.muted = mute;
     if (!mute) {

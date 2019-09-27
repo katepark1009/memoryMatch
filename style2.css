@@ -59,17 +59,23 @@ label, button {
   left: 24%;
 }
 .speakerbtn{
-  position: absolute;
+  width: 30px;
+  height: 30px;
+  position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 18%;
-  height: 11%;
+  display: inline-block;
+  top: 5px;
+  right: 2%;
+  position: absolute;
+  /* width: 18%;
+  height: 11%; */
   cursor: pointer;
-  background-image: url('images/speaker.png');
+  background-image: url('images/speakerwhite.jpg');
   z-index: 5000;
 }
 .mutebtn{
-  background-image: url('images/mute2.png');
+  background-image: url('images/mutewhite.png');
 }
 a:focus {
   outline: none;
@@ -82,8 +88,8 @@ a:hover {
 .link {
   position: absolute;
   text-decoration: none;
-  top: 5px;
-  right: 6%;
+  top: 3%;
+  left: 2%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: whitesmoke;
@@ -366,10 +372,10 @@ img {
   .cardcontainer {
     height: 18vh;
   }
-  .speakerbtn {
+  /* .speakerbtn {
     left: 10%;
     bottom: -1%;
-  }
+  } */
 }
 
 @media screen and (max-width: 1110px) {
@@ -412,12 +418,12 @@ img {
   .reset {
     top: 5px;
   }
-  .speakerbtn {
+  /* .speakerbtn {
     top: 85%;
     left: 4%;
     width: 29%;
     height: 20%;
-  }
+  } */
   .gamestats {
     height: 90%;
     display: flex;
@@ -503,6 +509,10 @@ img {
     font-weight: 700;
     font-size: 1rem;
   }
+  .speakerbtn {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media only screen and (min-device-width: 400px) and (max-device-width: 1024px) and (orientation:landscape) {
@@ -510,7 +520,7 @@ img {
     font-size: 1.5rem;
   }
   label, .value {
-    font-size: .6rem;
+    font-size: .8rem;
   }
   .reset {
     font-size: .7rem;
@@ -522,5 +532,11 @@ img {
   .message{
     font-weight: 700;
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-device-width: 740px) and (orientation:landscape) {
+  .tvcontainer {
+    display: none;
   }
 }
