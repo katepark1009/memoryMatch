@@ -3,4 +3,4 @@
 K-pop theme memory matching game with K-pop songs by utilizing jQuery, bootstrap4, JavaScript 
 
 #### [Live Demo](https://kpopmemorymatch.netlify.com/)
-![demo](img2.PNG)
+![demo](img2.png)
